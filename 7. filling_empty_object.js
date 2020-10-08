@@ -1,0 +1,11 @@
+var newObj = {};
+console.log(newObj);
+newObj.name = "Alex";
+console.log(newObj);
+newObj.lastName = "Smith";
+console.log(newObj);
+newObj.name = "Bob";
+console.log(newObj);
+delete newObj.name;
+delete newObj.lastName;
+console.log(newObj);
