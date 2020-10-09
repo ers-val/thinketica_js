@@ -2,12 +2,12 @@ function sortDesc(numbers){
 	numbers.sort((a,b)=>b-a);	
 }
 
-function getSortedArr(arr){
-    var newArr = [...arr];
-    sortDesc(newArr);
-    return newArr;
+function getSortedArray(array){
+    var newArray = [...array];
+    sortDesc(newArray);
+    return newArray;
 }
 
 /** */
 var a  = [1,2,4,6,7,9];
-console.log(getSortedArr(a));
+console.log(getSortedArray(a));

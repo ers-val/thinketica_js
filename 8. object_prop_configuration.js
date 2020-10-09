@@ -3,19 +3,20 @@ var human = Object.create({}, {
         set: function (text) {
             [this.firstName, this.lastName] = text.split(" ");
         },
-        get: () => `${this.firstName} ${this.lastName}`
+        get: function () {
+            return `${this.firstName} ${this.lastName}`;
+        },
     },
     dateOfBirth: {
         set: function (value) {
             this.birthDate = new Date(value);
             this.age = new Date().getFullYear() - this.birthDate.getFullYear();
         },
-        get: () => {
-            this.dateOfBirth
+        get: function () {
+            return this.birthDate;
         },
-    }
+    },
 });
-
 
 /* */
 human.fullName = "qwe asd";
@@ -23,3 +24,4 @@ console.log(human);
 console.log(human.fullName);
 human.dateOfBirth = "1.1.1990";
 console.log(human);
+console.log(human.dateOfBirth);

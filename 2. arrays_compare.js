@@ -1,8 +1,8 @@
-function are_equal(arr1, arr2) {
-    if (arr1.length != arr2.length) return false;
+function are_equal(array1, array2) {
+    if (array1.length != array2.length) return false;
 
-    for (var i = 0; i < arr1.length; i++) {
-        if (arr1[i] !== arr2[i]) {
+    for (var i = 0; i < array1.length; i++) {
+        if (array1[i] !== array2[i]) {
             return false;
         }
     }
@@ -10,9 +10,9 @@ function are_equal(arr1, arr2) {
 }
 
 /** */
-var a = [1,3,5];
-var b = [1,3,5];
-var c = [1,3,5,5];
+var a = [1, 3, 5];
+var b = [1, 3, 5];
+var c = [1, 3, 5, 5];
 
-console.log(are_equal(a,b));
-console.log(are_equal(a,c));
+console.log(are_equal(a, b));
+console.log(are_equal(a, c));

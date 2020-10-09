@@ -1,13 +1,30 @@
-function filterByLength(wordsArray, ...length) {
-    var newArr = [];
-    for (var num of length) {
-        var filtered = wordsArray.filter((word) => word.length === num);
-        newArr = newArr.concat(filtered);
+function filterByLength(wordsArray, ...lengthArguments) {
+    var newWordsArray = [];
+    for (var length of lengthArguments) {
+        var filteredWords = wordsArray.filter((word) => word.length === length);
+        newWordsArray = newWordsArray.concat(filteredWords);
     }
-    return newArr;
+    return newWordsArray;
 }
 
 /* */
-var words = ["" ,"","1","q","qw","as","zxc","qwe","qwer","asdf","zxcas","qwesd"];
-var sorted = filterByLength(words, 1, 5, 2);
-console.log(sorted);
+var words = [
+    "",
+    "",
+    "1",
+    "q",
+    "qw",
+    "as",
+    "zxc",
+    "qwe",
+    "qwer",
+    "asdf",
+    "zxcas",
+    "qwesd",
+];
+var filteredWords = filterByLength(words, 1, 5, 2);
+console.log(filteredWords);
+var filteredWords = filterByLength(words);
+console.log(filteredWords);
+var filteredWords = filterByLength(words, 0);
+console.log(filteredWords);

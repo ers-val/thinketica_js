@@ -1,23 +1,20 @@
 function getWordsArray(text) {
-    var newText = text.replace(/[,.\/\\:;'"(){}[\]\!@#=-?]/g, ' ');
+    var newText = text.replace(/[,.\/\\:;'"(){}[\]\!@#=-?]/g, " ");
     var wordsArray = newText.split(" ");
-    wordsArray = wordsArray.filter(word => word != false);
-    wordsArray = wordsArray.map(
-        (word) => {
-            return {
-                word: word,
-                length: word.length,
-                isCapitalized: isCapitalized(word)
-            }
-        }
-    );
+    wordsArray = wordsArray.filter((word) => word != false);
+    wordsArray = wordsArray.map((word) => {
+        return {
+            word: word,
+            length: word.length,
+            isCapitalized: isCapitalized(word),
+        };
+    });
     return wordsArray;
 }
 
 function isCapitalized(word) {
     return Boolean(word.match(/^[A-ZА-Я][a-zа-я]+$/g));
 }
-
 
 /**/
 

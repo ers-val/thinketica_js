@@ -1,12 +1,12 @@
-function randomSort(arr) {
-    var newArr = [...arr];
-    for (var id = 0; id < arr.length; id++) {
-        var rand_id = Math.ceil(Math.random() * arr.length - 1);
-        var temp = newArr[rand_id];
-        newArr[rand_id] = newArr[id];
-        newArr[id] = temp;
+function randomSort(array) {
+    var newArray = [...array];
+    for (var id = 0; id < array.length; id++) {
+        var randomId = Math.ceil(Math.random() * array.length - 1);
+        var temp = newArray[randomId];
+        newArray[randomId] = newArray[id];
+        newArray[id] = temp;
     }
-    return newArr;
+    return newArray;
 }
 
 /**/
