@@ -1,11 +1,12 @@
-function MoneyBox(){
-  let sum = 0;
-  return {
-    addCoin:()=>{sum+=1},
-    getAmount:()=>sum
-  }
+function MoneyBox() {
+    let balance = 0;
+    return {
+        addCoin: () => {
+            balance += 1;
+        },
+        getAmount: () => balance,
+    };
 }
-
 
 const box = new MoneyBox();
 

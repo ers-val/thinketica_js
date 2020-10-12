@@ -1,18 +1,21 @@
-function cache(){
+function cache() {
     let memory = {};
-    return (number, power)=>{
-        if (memory[number]){
+    return (number, power) => {
+        if (memory[number]) {
             return {
-                value: memory[number], fromCache: true
+                value: memory[number],
+                fromCache: true,
             };
         } else {
             var result = Math.pow(number, power);
             memory[number] = result;
-            return {value: result, fromCache: false};
+            return {
+                value: result,
+                fromCache: false,
+            };
         }
-  };
+    };
 }
-
 
 const calculate = cache();
 
