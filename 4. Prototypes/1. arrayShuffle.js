@@ -5,9 +5,9 @@ console.log(
 );
 
 Array.prototype.shuffle = function() {
-    for (var id = 0; id < this.length; id++) {
-        var randomId = Math.ceil(Math.random() * this.length - 1);
-        var temp = this[randomId];
+    for (let id = 0; id < this.length; id++) {
+        const randomId = Math.ceil(Math.random() * this.length - 1);
+        const temp = this[randomId];
         this[randomId] = this[id];
         this[id] = temp;
     }
